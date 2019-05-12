@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="lib/jquery/dist/jquery.js"></script>
+
+    <style>
+        .error-login {
+            background-color:red;
+            color:yellow;
+        }
+    </style>
+</head>
+<body>
+    <div>Username: <input id="txtUser"/></div>
+    <div>Password: <input type="password" id="txtPassword"/></div>
+    <button type="button" id="btnLogin">Login</button>
+    <div id="message"></div>
+
+    <script type="text/javascript">
+        $(function () {
+            //Gắn sự kiện click
+            $("#btnLogin").click(function () {
+                var user = $("#txtUser");
+                var pass = $("#txtPassword");
+
+                //nếu dang là logout
+                if ($(this).html() == "logout") {
+                    $(this).html("Login");
+                    //bỏ thẻ được thêm sau thẻ input
+                    user.next().remove();
+                    pass.next().remove();
+                    //hiện thẻ input ra
+                    user.show(); pass.show();
+                    user.val(""); pass.val("");
+                    return;
+                }
+
+                //nếu 1 trong 2 rỗng.
+                if (user.val().length == 0 || pass.val().length == 0) {
+                    $("#message").html("chưa nhập thông tin");
+                    user.addClass("error-login");
+                    pass.addClass("error-login");
+                    return false;
+                } 
+                //nếu nhập > 5 kí tự là thành công
+                if (user.val().length < 5 || pass.val().length <= 5) {
+                    $("#message").html("sai ten dang nhap");
+                    return false;
+                }
+                $("#message").html("DANG NHAP THANH CONG");
+                if (user.hasClass("error-login"))
+                    user.remove("error-login");
+                pass.remove("error-login");
+
+                $(this).html("logout");
+
+                //theem vaof sau user/pass ther div chua noidung nhap
+                user.after("<div>" + user.val() + "</div>");
+                pass.after("<div>" + pass.val() + "</div>");
+
+                //an o nhap
+                user.hide(); pass.hide();
+                return true;
+            });
+        });
+    </script>
+</body>
+</html>

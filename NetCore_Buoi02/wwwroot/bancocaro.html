@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <style>
+        td{
+            width:25px; height:25px; border: 1px solid blue;
+            text-align:center;
+        }
+        /*odd la chan*/
+        tr:nth-child(odd) {
+            background-color:cyan;
+
+        }
+        /*even la le*/
+        tr:nth-child(even) {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="Show" id="btnShow" />
+    <input type="button" value="Hide" id="btnHide" />
+    <input type="button" value="Toggle" id="btnToggle" />
+    <input type="button" value="Clear" id="btnClear" />
+    <table id="tblBanCo">
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <script type="text/javascript">
+        $(function () {
+            $("#btnShow").click(function () {
+                $("#tblBanCo").show(1000);
+            });
+
+            $("#btnHide").click(function () {
+                $("#tblBanCo").hide(1000);
+            });
+            $("#btnToggle").click(function () {
+                $("#tblBanCo").toggle(1000);
+            });
+
+            var gt = "X";
+            $("#tblBanCo td").click(function () {
+                //Kiem tra Ô nào trống thì thực thi
+                if ($(this).html() == "") {
+                    $(this).html(gt);
+                    gt = (gt == "X") ? "O" : "X";
+                }
+            });
+
+            $("#btnClear").click(function () {
+                //duyệt qua từng ô td
+                $("#tblBanCo td").each(function (index, mytd) {
+                    $(mytd).html("");
+                })
+            });
+            
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28306.52
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCore_Buoi02", "NetCore_Buoi02\NetCore_Buoi02.csproj", "{DC9A5A56-9EAB-46F3-B503-87CD9C619E20}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC9A5A56-9EAB-46F3-B503-87CD9C619E20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC9A5A56-9EAB-46F3-B503-87CD9C619E20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC9A5A56-9EAB-46F3-B503-87CD9C619E20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC9A5A56-9EAB-46F3-B503-87CD9C619E20}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7D64ADB0-AAC3-4257-A42A-6602E34CF9CD}
+	EndGlobalSection
+EndGlobal

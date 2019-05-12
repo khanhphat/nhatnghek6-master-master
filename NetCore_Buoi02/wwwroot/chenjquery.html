@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Hoc JQUERY</title>
+    <script src="lib/jquery/dist/jquery.js"></script>
+</head>
+<body>
+    <input type="text" id="txtname" placeholder="moi ban nhap" />
+    <input type="button" value="click me!" id="btnclick"/>
+    <div> div 1</div>
+    <div> div 15</div>
+    <div> div 15</div>
+    <div> div 14</div>
+    <div> div 13</div>
+    <div> div 12</div>
+
+    <script type="text/javascript">
+        //khi trang render xong thi goi ham
+        $(function () {
+            //gắn sự kiện  biến mất khi hơ chuột.
+            $("div").hover(function () {
+                $(this).css({
+                    "color": "red",
+                    "border": "1px solid #ccc",
+                    "margin": "5px"
+                });
+
+                //this tác động đến thẻ div vua dc chọn trc do.
+                //$(this).hide(1000);
+            });
+
+            //gan su kien click nut hello
+            $("#btnclick").click(function () {
+                var ten = $("#txtname").val();
+                alert("xin chao: " + ten);
+            });    
+        });
+    </script>
+</body>
+</html>

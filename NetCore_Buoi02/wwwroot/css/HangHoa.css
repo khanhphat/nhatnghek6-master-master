@@ -1,0 +1,40 @@
+﻿/*Khung ngoai cung*/
+.hh-box {
+    position:relative;
+    width: 220px; height:300px;
+    border:1px solid #ff0000;
+    border-radius: 7px;
+    display:inline-block; /*box khoi noi tuyen tu troi len*/
+    margin:35px 5px 5px 5px;
+}
+.hh-box:hover{
+    /*x: theo chieu ngang, y:doc, z: doday mau;*/
+    box-shadow: 0 0 10px red;
+}
+.hh-img {
+    max-width: 100%;
+    margin-top: 10px;
+    object-fit: contain;
+}
+.hh-new {
+    width: 80px;
+    position: absolute;
+    top: 0;
+    right: 0px;
+}
+.hh-price {
+    position:absolute;
+    left: 5px;
+    bottom:5px;
+    font-size:large;
+    color:green;
+}
+.hh-name {
+    position: absolute;
+    left: 0;
+    top: -34px;
+    font-size: xx-large;
+    font-weight: bolder;
+    color: tomato;
+    width: inherit; /*Thua huong tu thang cha hh-box: width: 220*/
+}
