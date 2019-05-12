@@ -1,0 +1,35 @@
+﻿.nn-header {
+    position:relative;
+    height:170px;
+    border: 1px solid #ffd800;
+}
+.nn-company {
+    position:absolute;
+    top:45px;
+    left:10px;
+    text-shadow: 0 0 4px black;
+}
+
+.nn-sologon {
+    position: absolute;
+    top: 95px;
+    left: 10px;
+    text-shadow: 0 0 4px black;
+    border-top:2px dotted #ff0000;
+}
+
+.nn-sheet {
+    min-height:400px;
+    box-shadow: 0 0  5px #ff6a00;
+    border: 1px dashed #ff6a00;
+    margin: 0 3px;
+    border-radius:5px; padding: 5px;
+}
+
+.card-hover {
+    
+}
+    .card-hover:hover {
+        margin-left: 5px;
+        text-decoration: none;
+    }
